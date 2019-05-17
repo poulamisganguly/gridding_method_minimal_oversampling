@@ -11,8 +11,7 @@ setup(
                              sources=[ "gridrec_v4.pyx" ,
                                        "gridrec_v4_backproj.c" ,
                                        "gridrec_v4_forwproj.c" ,
-                                       "filters.c" ,
-                                       "fft.c"
+                                       "filters.c"
                                        ],
                              include_dirs=[numpy.get_include()],libraries=['fftw3f','gcov'],extra_compile_args=['-w','-O3','-march=native','-ffast-math','-fprofile-generate'],extra_link_args=['-fprofile-generate'])],
 )
