@@ -347,6 +347,7 @@ void gridrec_v4_backproj( float *sino , int npix , int nang , float *angles , fl
       /*
        *   Get polar coordinates
        */
+      angles = atan(0.1*tan(angles[n]) /* changing angles for slab based geometry */
       SIN = sin( angles[n] * PI / 180 );
       COS = cos( angles[n] * PI / 180 );
       scaling = 1.0;
